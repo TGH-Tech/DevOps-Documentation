@@ -1,0 +1,18 @@
+service: testbot
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: ap-south-1
+
+
+
+functions:
+  shortbot:
+    handler: handler.shortbot
+    events:
+        - httpApi:
+            path: /users/create
+            method: post
