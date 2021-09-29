@@ -1,0 +1,16 @@
+service: expressInAWSDemo #Name of your App
+
+provider:
+ name: aws #Public Cloud Provider
+ runtime: nodejs10.x #Node JS version
+ memorySize: 512 #Ram
+ timeout: 15 #ttl
+ stage: production  
+ region: ap-south-1 # AWS-region (Mumbai)
+
+functions:
+ api:
+   handler: lambda.handler  #this should be same as the module which is exported
+   events:
+     - http: ANY {proxy+} #All the Routes
+     - http: ANY / #Root
