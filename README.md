@@ -1,4 +1,4 @@
-# AWS_Serverless Codes
+# DevOps Documentation
 
 1.  **Basic serverless function [Click Here](https://github.com/TGH-Tech/DevOps-Documentation/tree/main/API-GATEWAY)**<br>
 2.  **Basic code [Click Here](https://github.com/TGH-Tech/DevOps-Documentation/tree/main/AWS-Research)**
