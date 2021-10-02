@@ -31,3 +31,62 @@ Serverless Computing VS Containers
             **Containers** are hosted in the cloud, but cloud providers do not update or maintain them. Developers have to manage and update each container they deploy.
             **Serverless** architecture has no backend to manage. The vendor takes care of all management and software updates for the servers that run the code.
 
+# Tools
+## DevOps planning tools
+1. JIRA
+2. Redmine
+3. Trac
+4. Rally.
+
+## DevOps build tools
+1. Apache Maven
+2. Visual Studio
+
+## DevOps CI/CD tools
+1. Jenkins
+2. Bamboo
+3. Codeship
+4. Github Actions
+
+## DevOps Provisioning, Version Conrol tools
+Infrastructure As A Code
+1. Ansible
+2. AWS Cloud Formation
+3. Chef
+4. Git
+5. Gutlab
+6. Puppet
+7. Terraform
+
+## DevOps Software testing tools
+1. SonarQube
+2. Selenium
+
+## DevOps Deployment tools
+1. AWS CodeDeploy
+2. Go
+3. Google Deployment Manager
+
+## DevOps monioring tools
+1. Datadog
+2. Elasticsearch
+3. Grafana
+4. Kibana
+5. Pagerduty
+6. Splink
+
+## DevOps log management tool
+1. Logstash
+
+## DevOps Container tools
+1. Docker
+2. Kubermetes
+3. Linux Container
+
+## DevOps virtualization tools
+1. Vagrant
+2. Virtual Box
+3. VMware
+4. Xen
+
+#
