@@ -112,3 +112,16 @@ To run docker containers, you need some kind of infrastructure.
 1. Terraform - Integration with continuous integration platforms like GitLab and Jenkins for deploying DevOps pipelines is easy. <br>
 2. Ansible - It uses human-readable YAML files for configuration management. <br>
 
+## Serverless Architecture
+1. CloudFormation: AWS CloudFormation templates describe resources and dependencies for stack deployments
+2. SAM: Serverless Application Model (SAM) is an open-source framework used for IaC
+3.  Serverless Framework: Another open-source framework for IaC, written in Node.js for AWS Lambda
+4.  Terraform: A multi-cloud tool for IaC
+
+You can use AWS Fargate or Lambda
+
+## Backend As A Service
+        * For a custom backend, you will have to create your backend from scratch and handle the infrastructure. The pros of this approach are the flexibility it provides and customization possibilities. The cons are higher development costs and a longer time to market.
+        * A BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.
+[Supabase](https://supabase.io/pricing)
+[Appwrite](https://appwrite.io/)
