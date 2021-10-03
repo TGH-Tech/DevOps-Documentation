@@ -100,7 +100,8 @@ NB: A single Jenkins server might not be sufficient to handle the load that come
 To run docker containers, you need some kind of infrastructure.
 1. Serverless option known as AWS Fargate that removes the need for you to interact with or think about servers or clusters.
 2. Using EC2. Here users need to take care of software upgrades, patches, identifying security vulnerabilities etc <br>
-![Image](Fargate.png)
+![Image](Fargate.png) <br>
+
 **Docker** 
 1. Running Docker on EC2
 2. Running Docker on ECS
