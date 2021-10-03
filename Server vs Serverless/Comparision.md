@@ -38,8 +38,9 @@ Serverless Computing VS Containers
 3. Trac
 4. Rally.
 
-## DevOps build tools
-1. Apache Maven
+## DevOps build tools 
+It helps in project management i.e building and documenting the project.
+1. Apache Maven - For Java-based projects
 2. Visual Studio
 
 ## DevOps CI/CD tools
@@ -89,4 +90,24 @@ Infrastructure As A Code
 3. VMware
 4. Xen
 
-#
+# Which is best ?
+**Git** - To manage different Versions of source code. <br>
+Its an easy to learn tool and most of the delevepors knew how to use it. We can work loclly and can push to remote repository like Github/Gitlab. <br>
+**Jenkins** - For continuous integration <br>
+When a code is pushed to Github, Jenkins can trigger a build and ```war file``` will be genearted. In case of a successful build, the built application (or executable) is deployed to the test server. If there are no build, integration, and testing issues with the code, the changes and tested application are automatically deployed to the Production server. <br>
+NB: A single Jenkins server might not be sufficient to handle the load that comes with large-scale software projects. <br>
+**ECS** is useful for applications that are already embedded in the docker/containers <br>
+To run docker containers, you need some kind of infrastructure.
+1. Serverless option known as AWS Fargate that removes the need for you to interact with or think about servers or clusters.
+2. Using EC2. Here users need to take care of software upgrades, patches, identifying security vulnerabilities etc <br>
+![Fargate](Server vs Serverless/Screenshot from 2021-10-03 13-25-35.png)
+**Docker** 
+1. Running Docker on EC2
+2. Running Docker on ECS
+3. Running Docker on Fargate
+4. Running Docker on EKS
+
+**Terraform**/**Ansible** for infrastructure management and provisioning i.e builing the infrastructure. Ansible is used to add, update, delete and manage the configuration of the IT infrastructure, whereas Terraform is used to declare infrastructure components and orchestrate them across multiple cloud providers. <br>
+1. Terraform - Integration with continuous integration platforms like GitLab and Jenkins for deploying DevOps pipelines is easy. <br>
+2. Ansible - It uses human-readable YAML files for configuration management. <br>
+
