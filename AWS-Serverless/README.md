@@ -1,3 +1,15 @@
+# Points to note while deploying a serverless bot
+You should have an idea about [Webhook](https://core.telegram.org/bots/webhooks) \
+  * Basically, a webhook is used for getting updates when a user sends a command or a message to the bot.
+  * However, in order to set a webhook, telegram requires an HTTPS enabled url to which telegram servers make a POST request on each message input. 
+  * We create a lambda function, which when deployed, provides us an HTTPS enabled url. 
+  * We set up the Telegram webhook using the above HTTPS enabled url to which telegram makes a POST request which contains the message object just as it is received in the `bot.onText(/regex/, msg=>console.log(msg))` msg object.
+  * We can then set up a switch statement or an if-else ladder to evaluate the message text and perform various actions depending on the command entered.
+  * **Note**: It is not necessary that you use the `node-telegram-bot-api` library to send a message or get msg input etc. Telegram provides apis which can be used to send messages easily by passing in the chatId, msg-text, keyboardType etc, as seen in the above articles. Msg input can be received using webhooks as well as mentioned in the above paragraph.
+  * Create a `serverless.yml` file and define the function with a path similar to the article mentioned above and deploy the function using `serverless deploy`
+  * You can also [check this](https://xabaras.medium.com/setting-your-telegram-bot-webhook-the-easy-way-c7577b2d6f72) to know Set up, remove, get status of webhooks
+
+
 # AWS_Serverless
 
 We are going to use Serverless Framework. In order to use it on your machine, install Node.js. <br>
@@ -38,3 +50,6 @@ Once its deployed you will get endpint in the terminal. Next task is to set up w
 <br>
 <br>
 Sucessfully we have built our simple serverless bot. Check your telegram.
+
+
+
