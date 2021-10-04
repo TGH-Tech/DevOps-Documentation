@@ -125,3 +125,9 @@ You can use AWS Fargate or Lambda
 * A BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.
 * [Supabase](https://supabase.io/pricing)
 * [Appwrite](https://appwrite.io/)
+
+# Databases for serverless
+1. MongoDB (Atlas) 
+2. Cassandra (Datastax Astra) -Datastax Astra provides REST and GraphQL API in addition to native Cassandra drivers.
+3. DynamoDB (AWS)
+4. Upstash - The serverless Redis database
