@@ -51,5 +51,16 @@ Once its deployed you will get endpint in the terminal. Next task is to set up w
 <br>
 Sucessfully we have built our simple serverless bot. Check your telegram.
 
-
-
+# Points to keep in mind
+  * It is important that you return an object with statusCode 200 so that telegram understands that the query has been successfully answered. 
+  * when you want to send JSON, ensure that you send it after stringifying it first.
+  * Request path contains unescaped characters which can be fixed by creating a function to format text using [this](https://stackoverflow.com/questions/31024779/typeerror-request-path-contains-unescaped-characters-how-can-i-fix-this/62437210#62437210)
+  * Lambda is stateless, meaning that you can’t persist variable states in global variables, Each new call will result in a fresh instance being fired upon. This would have implications when storing user keyboard presses in memory. (Some alternative would be storing the button status in a db (too slow) or using some in-memory cache systems like Redis or Memcached (as suggested in the discussion thread by Node-telegram bot api)).
+  * Telegram ensures only one way of getting inputs is active at any particular moment. Hene you can’t have polling and webhooks enabled at the same time. Ie. If you use the node-telegram-bot-api and set polling:true and have also enabled a webhook, when you run npm start, the webhook will automatically get disabled. 
+  * In order to delete pending messages which may get accumulated in case you forgot to return 200 statusCode or for any other reason that could result in same response message being sent by the bot, you can use the following url structure to delete pending updates: *https://api.telegram.org/bot{my_bot_token}/setWebhook?url={url_to_send_updates_to}&drop_pending_update=true*
+  * If you’ve got some extra route defined which accepts a request from a backend and performs an action (eg: `‘/notify’` route which when called sends a telegram notification message to the user), then that function can be exported and defined in the `serverless.yml` file which will give a new HTTPS url for that function. This can then be called by the backend to invoke that function. The package [aws serverless express](https://github.com/vendia/serverless-express) can be used if the function is complex and would require some expressJs like route handling.
+  * Note that you may have environment variables which may be defined in a .env file. This needs to be added to the aws console as well by going to the `configuration` tab and selecting `environment-variables` section from the left side menu.
+  <br>
+  ## Things which could be explored and improved when the need arises
+    * Use [ngrok](https://ngrok.com/) to expose a local port to the internet, which would provide an HTTPS enabled url which can be used to set up the webhook. This would enable live-reloading whenever a change is made as there would be no more need to deploy the function to AWS to see the changes
+    * A way to connect a database like MongoDb.  This can be done by calling the Mongo connect function in the handler function so as to persist the database connection for some time without having to do a cold start for each invocation like mentioned [here](https://github.com/vendia/serverless-express#async-setup-lambda-handler)
