@@ -121,7 +121,7 @@ To run docker containers, you need some kind of infrastructure.
 You can use AWS Fargate or Lambda
 
 ## Backend As A Service
-        * For a custom backend, you will have to create your backend from scratch and handle the infrastructure. The pros of this approach are the flexibility it provides and customization possibilities. The cons are higher development costs and a longer time to market.
-        * A BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.
-[Supabase](https://supabase.io/pricing)
-[Appwrite](https://appwrite.io/)
+ * For a custom backend, you will have to create your backend from scratch and handle the infrastructure. The pros of this approach are the flexibility it provides and customization possibilities. The cons are higher development costs and a longer time to market.
+* A BaaS will deliver ready to use building blocks and code generation tools. The advantages of this approach are a much faster development process and reduced time to market. The cons will be lower flexibility and following a standardized architecture.
+* [Supabase](https://supabase.io/pricing)
+* [Appwrite](https://appwrite.io/)
