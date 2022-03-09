@@ -60,7 +60,7 @@ Now add the public key in the autherised keys section. Why we are adding is then
 1. Login in to Jenkins and go to credentials section and add the private key with correct username. I will be using ubuntu as the username. It is the default user name for Ubuntu seerver. This comes under *SSH Username with private key* 
 2. Now got to Configure settings and add the IP address of Production EC2, port as 22, select the previous credentials from the drop down menu, give other values as 0. 
 3. **NB** If SSH section is not avaliable Install the SSH plugins like **Publish-over-ssh**, **SSH-agent** etc.Then the ssh section will be visible. You can use the **Check Connection** to check whether the configuration is correct or not.
-4. Next we will be creating the pipeline. Go to **New Item** and select **freestyle**. Give a required name.
+4. Next we will be creating the pipeline. Select **New Item**, which will be on the left side and select **freestyle** as the project. Give a required name.
 5. Under General section add GitHub project and add the project link
 6. For source code managemnt add the same repo link. If you haven't configured the GitHub credentials you will get error. 
 7. Mention the correct branch which you need to deploy to your production server.
