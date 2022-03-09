@@ -37,3 +37,21 @@ PM2 is a tool that will keep your site up as it restarts the application if it c
 ```yml
 sudo npm install pm2 -g
 ```
+Now we need to configure the ssh key, use the below code to create a new key
+```yml
+ssh-keygen -t rsa -m PEM
+```
+This will create new key. Go to
+```
+cd .ssh/
+```
+Here there will be two files. 
+    1. Private Key 
+    2. Public Key
+    
+Copy the Public key and paste it in the SSH key section of Github. We are adding this so that we can clone and pull the code directly form GitHub. This is helpfull when running *Exec shell commands*.
+<br>
+
+**Jenkins GUI**
+
+1. Login in to Jenkins and go to credentials section and add the Public key with correct user name. I will be using ubuntu as the username. It is the default user name for Ubuntu seerver. This comes under *SSH Username with private key* 
