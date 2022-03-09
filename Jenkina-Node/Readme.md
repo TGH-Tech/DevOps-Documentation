@@ -54,4 +54,6 @@ Copy the Public key and paste it in the SSH key section of Github. We are adding
 
 **Jenkins GUI**
 
-1. Login in to Jenkins and go to credentials section and add the Public key with correct user name. I will be using ubuntu as the username. It is the default user name for Ubuntu seerver. This comes under *SSH Username with private key* 
+1. Login in to Jenkins and go to credentials section and add the private key with correct username. I will be using ubuntu as the username. It is the default user name for Ubuntu seerver. This comes under *SSH Username with private key* 
+2. Now got to Configure settings and add the IP address of Production EC2, port as 22, select the previous credentials from the drop down menu, give other values as 0. 
+3. **NB** If SSH section is not avaliable Install the SSH plugins like **Publish-over-ssh**, **SSH-agent** etc.Then the ssh section will be visible. You can use the **Check Connection** to check whether the configuration is correct or not.
