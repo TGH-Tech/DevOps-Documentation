@@ -51,9 +51,27 @@ Here there will be two files.
     
 Copy the Public key and paste it in the SSH key section of Github. We are adding this so that we can clone and pull the code directly form GitHub. This is helpfull when running *Exec shell commands*.
 <br>
+Now add the public key in the autherised keys section. Why we are adding is then only the Jenkins can ssh to Production EC2.
 
-**Jenkins GUI**
+# Jenkins GUI
 
 1. Login in to Jenkins and go to credentials section and add the private key with correct username. I will be using ubuntu as the username. It is the default user name for Ubuntu seerver. This comes under *SSH Username with private key* 
 2. Now got to Configure settings and add the IP address of Production EC2, port as 22, select the previous credentials from the drop down menu, give other values as 0. 
 3. **NB** If SSH section is not avaliable Install the SSH plugins like **Publish-over-ssh**, **SSH-agent** etc.Then the ssh section will be visible. You can use the **Check Connection** to check whether the configuration is correct or not.
+4. Now go to **New Item** and select **freestyle**. Give a required name.
+5. 5. Under General section add GitHub project and add the project link
+6. 6. For source code managemnt add the same repo link. If you haven't configured the GitHub credentials you will get error. 
+7. 7. Mention the correct branch which you need to deploy to your production server.
+8. 8. For the **Build Environment** select *Execute shell script on remote host using ssh* <br>
+9. Here add the commands you need to execute in the remote host.
+10. <br>
+11. ```yml
+12. cd /home/ubuntu/<filename> && git pull
+13. ```
+14. ```yml
+15. sudo pm2 restart <filename>/index.js or server.js
+    ```
+    
+   <br>
+    
+    **NB** 
