@@ -45,6 +45,8 @@ This will create new key. Go to
 ```
 cd .ssh/
 ```
+use **ls** command to see all the files
+<br.
 Here there will be two files. 
     1. Private Key 
     2. Public Key
