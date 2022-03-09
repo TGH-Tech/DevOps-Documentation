@@ -59,15 +59,16 @@ Now add the public key in the autherised keys section. Why we are adding is then
 2. Now got to Configure settings and add the IP address of Production EC2, port as 22, select the previous credentials from the drop down menu, give other values as 0. 
 3. **NB** If SSH section is not avaliable Install the SSH plugins like **Publish-over-ssh**, **SSH-agent** etc.Then the ssh section will be visible. You can use the **Check Connection** to check whether the configuration is correct or not.
 4. Now go to **New Item** and select **freestyle**. Give a required name.
-5. 5. Under General section add GitHub project and add the project link
-6. 6. For source code managemnt add the same repo link. If you haven't configured the GitHub credentials you will get error. 
-7. 7. Mention the correct branch which you need to deploy to your production server.
-8. 8. For the **Build Environment** select *Execute shell script on remote host using ssh* <br>
+5. Under General section add GitHub project and add the project link
+6. For source code managemnt add the same repo link. If you haven't configured the GitHub credentials you will get error. 
+7. Mention the correct branch which you need to deploy to your production server.
+8. For the **Build Environment** select *Execute shell script on remote host using ssh* <br>
 9. Here add the commands you need to execute in the remote host.
 10. <br>
 11. ```yml
 12. cd /home/ubuntu/<filename> && git pull
 13. ```
+    <br>
 14. ```yml
 15. sudo pm2 restart <filename>/index.js or server.js
     ```
