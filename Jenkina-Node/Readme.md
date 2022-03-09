@@ -25,7 +25,7 @@ sudo npm install -g n
 ```yml
 sudo n stable
 ```
-5. Verify the installation by running:
+5.Verify the installation by running:
 ```yml
 nodejs --version
 ```
@@ -33,7 +33,7 @@ nodejs --version
 <br>
 PM2 is a tool that will keep your site up as it restarts the application if it crashes, and also help you by restarting the node application as a service when you restart the server.
 <br>
-6. To install PM2 use the following command:
+6.To install PM2 use the following command:
 ```yml
 sudo npm install pm2 -g
 ```
@@ -74,4 +74,6 @@ Now add the public key in the autherised keys section. Why we are adding is then
     
    <br>
     
-    **NB** 
+    **NB** You need to clone your repo first time using ssh link from github and run the process using pm2
+    <br>
+    Now if the pipeline need to run after each commit you need to setup Github Webhook and you need to enable **GitHub Hook** under **Build Trigger** section
