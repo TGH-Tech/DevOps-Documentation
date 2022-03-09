@@ -64,17 +64,11 @@ Now add the public key in the autherised keys section. Why we are adding is then
 7. Mention the correct branch which you need to deploy to your production server.
 8. For the **Build Environment** select *Execute shell script on remote host using ssh* <br>
 9. Here add the commands you need to execute in the remote host.
-10. <br>
-11. ```yml
-12. cd /home/ubuntu/<filename> && git pull
-13. ```
-    <br>
-14. ```yml
-15. sudo pm2 restart <filename>/index.js or server.js
-    ```
-    
-   <br>
-    
-    **NB** You need to clone your repo first time using ssh link from github and run the process using pm2
-    <br>
-    Now if the pipeline need to run after each commit you need to setup Github Webhook and you need to enable **GitHub Hook** under **Build Trigger** section
+```yml
+cd /home/ubuntu/<filename> && git pull
+ ```
+```yml
+sudo pm2 restart <filename>/index.js or server.js
+ ```
+**NB** You need to clone your repo first time using ssh link from github and run the process using pm2
+Now if the pipeline need to run after each commit you need to setup Github Webhook and you need to enable **GitHub Hook** under **Build Trigger** section
