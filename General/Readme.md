@@ -28,3 +28,9 @@ using path package of nodejs.
 In bots(developed using nodejs), to confiure the path for environmental variables, we can use:
 
 `require('dotenv').config({ path: path.join(__dirname, '.env') })`
+
+# CICD Pipeline
+
+If there is a pipeline, developer should inform the addition of new packages or dependencies to the person who has created the pipeline. 
+<br>
+Telegram Bot : For testing and in production, the bot token or the telegram api should be different. 
