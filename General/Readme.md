@@ -6,7 +6,7 @@ Each project should have
 
 1. Main Branch
 2. Test Branch - This branch is used by developers to test the project before deplopyment. Heroku or AWS Amplify is used for testing as of now.
-3.pp Deploy/Deployment Branch - Used for deployment. Code in this branch is for production.
+3. Deploy/Deployment Branch - Used for deployment. Code in this branch is for production.
 
 **Path**
 
